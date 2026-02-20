@@ -3,7 +3,7 @@ import { Mail, Send, CheckCircle, XCircle, Loader2 } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const SERVICE_ID = "service_dud90ci";
-const TEMPLATE_ID = "template_0h5x9bk";
+const TEMPLATE_ID = "template_vr1iw0o";
 const PUBLIC_KEY = "KrG0YRAcoQQ2ZyrdQ";
 
 const ContactSection = () => {
