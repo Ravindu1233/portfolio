@@ -3,15 +3,25 @@ import { motion } from "framer-motion";
 import profilePhoto from "@/assets/profile-photo.jpg";
 
 const stats = [
-  { value: "3+", label: "Years\nExperience" },
-  { value: "50+", label: "Projects\nCompleted" },
+  { value: "1+", label: "Years\nExperience" },
+  { value: "10+", label: "Projects\nCompleted" },
   { value: "15+", label: "Technologies" },
-  { value: "98%", label: "Client\nSatisfaction" },
+  { value: "2", label: "Internships\nCompleted" },
 ];
 
 const HeroSection = () => {
+  const scrollToContact = () => {
+    const section = document.getElementById("contact");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <section className="min-h-screen flex items-center relative overflow-hidden bg-background pt-20">
+    <section
+      id="hero"
+      className="min-h-screen flex items-center relative overflow-hidden bg-background pt-20"
+    >
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-[0.03]"
@@ -38,12 +48,12 @@ const HeroSection = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card glow-border mb-6">
               <Star className="w-4 h-4 text-primary" />
               <span className="text-sm text-muted-foreground">
-                Full Stack Developer & AI Enthusiast | San Francisco, CA
+                Full Stack Developer & Software Engineer | Colombo, Sri Lanka
               </span>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 leading-[1.1]">
-              John <span className="text-gradient">Doe</span>
+              Ravindu <span className="text-gradient">Weerasinghe</span>
               <br />
               <span className="text-muted-foreground text-3xl md:text-4xl font-medium">
                 Developer Portfolio
@@ -51,32 +61,43 @@ const HeroSection = () => {
             </h1>
 
             <p className="text-lg text-muted-foreground max-w-lg mb-8 leading-relaxed">
-              Building modern, scalable web applications with React, JavaScript,
-              and cutting-edge technologies. Transforming ideas into exceptional
-              digital experiences.
+              Enthusiastic Software Engineer with a strong foundation in
+              object-oriented programming, React.js, Java, Next.js and Spring
+              Boot. Passionate about building modern web applications and
+              transforming ideas into exceptional digital experiences.
             </p>
 
             <div className="flex items-center gap-3 mb-12">
-              <a
-                href="mailto:john@example.com"
+              {/* Scrolls smoothly to contact section */}
+              <button
+                onClick={scrollToContact}
                 className="px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 transition-opacity glow-green"
               >
                 Get in Touch
-              </a>
+              </button>
+
+              {/* LinkedIn */}
               <a
-                href="#"
+                href="https://www.linkedin.com/in/ravindu-weerasinghe-681656317/"
+                target="_blank"
                 className="w-11 h-11 rounded-lg glow-border glass-card flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
+
+              {/* GitHub */}
               <a
-                href="#"
+                href="https://github.com/Ravindu1233"
+                target="_blank"
                 className="w-11 h-11 rounded-lg glow-border glass-card flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
               >
                 <Github className="w-5 h-5" />
               </a>
+
+              {/* Mail icon — opens Gmail compose directly in browser */}
               <a
-                href="mailto:john@example.com"
+                href="https://mail.google.com/mail/?view=cm&to=ravindu.dilshan1013@gmail.com"
+                target="_blank"
                 className="w-11 h-11 rounded-lg glow-border glass-card flex items-center justify-center text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-5 h-5" />
@@ -88,7 +109,9 @@ const HeroSection = () => {
               {stats.map((stat, i) => (
                 <div
                   key={i}
-                  className={`${i > 0 ? "border-l border-border pl-6 md:pl-10" : ""}`}
+                  className={
+                    i > 0 ? "border-l border-border pl-6 md:pl-10" : ""
+                  }
                 >
                   <p className="text-2xl md:text-3xl font-bold text-primary">
                     {stat.value}
@@ -111,11 +134,10 @@ const HeroSection = () => {
             <div className="w-72 h-80 md:w-96 md:h-[28rem] rounded-2xl overflow-hidden glow-border glow-green">
               <img
                 src={profilePhoto}
-                alt="John Doe - Developer"
+                alt="Ravindu Weerasinghe - Developer"
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Decorative corner brackets */}
             <div className="absolute -top-3 -left-3 w-8 h-8 border-t-2 border-l-2 border-primary rounded-tl-lg" />
             <div className="absolute -bottom-3 -right-3 w-8 h-8 border-b-2 border-r-2 border-primary rounded-br-lg" />
           </motion.div>

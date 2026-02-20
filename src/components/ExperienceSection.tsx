@@ -11,25 +11,38 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    company: "XYZ Technologies",
-    role: "Full Stack Developer",
-    duration: "Jan 2021 – Present",
+    company: "Taznic Technologies",
+    role: "Full-Stack Developer Intern",
+    duration: "2024 – Present",
     responsibilities: [
-      "Designed and developed multiple web applications using React.js and Node.js.",
-      "Led a team of 4 developers to successfully deliver project X on time.",
-      "Collaborated with designers to improve UI/UX for enhanced user engagement.",
+      "Developed a Vehicle Sales Aggregator web application that consolidates vehicle listings from multiple platforms into a single unified interface.",
+      "Built advanced search and filtering features allowing users to filter by make, model, year, price range, mileage, and location.",
+      "Implemented a price comparison tool enabling side-by-side comparison of similar vehicles across different sources.",
+      "Developed user and admin authentication systems with listing approval workflows to ensure quality control.",
+      "Designed and optimized backend APIs for efficient data aggregation, storage, and retrieval of vehicle listings.",
+      "Integrated user alerts and notifications for specific vehicle models or price ranges.",
     ],
-    achievements: ["Reduced page load time by 30% through performance optimization."],
+    achievements: [
+      "Delivered a full-featured aggregator platform covering the complete vehicle listing lifecycle from scraping to display.",
+      "Implemented listing approval workflows that reduced fraudulent or duplicate listings significantly.",
+    ],
   },
   {
-    company: "ABC Innovations",
-    role: "Software Engineer Intern",
-    duration: "Jun 2020 – Dec 2020",
+    company: "Idea8 Solutions",
+    role: "Full-Stack Developer Intern",
+    duration: "2024",
     responsibilities: [
-      "Built RESTful APIs with Express.js and integrated third-party services.",
-      "Wrote comprehensive unit and integration tests, increasing coverage to 90%.",
+      "Built an MTG (Magic: The Gathering) Card Sorting application with advanced filtering, categorization, and sorting capabilities.",
+      "Designed an admin panel where admins can define device types (e.g., 5×5 grids) and register individual devices under those types.",
+      "Implemented a template creation system where templates are built based on device type, with each slot configurable for content, pricing, and card attributes.",
+      "Supported both alphabetical and price-based sorting modes within templates, with flexible toggling between the two.",
+      "Designed the full-stack architecture with a focus on API efficiency, scalable database design, and a clean, intuitive UI/UX.",
+      "Enabled device login flows where each registered device can authenticate and load its assigned template configuration.",
     ],
-    achievements: ["Automated CI/CD pipeline, cutting deployment time by 50%."],
+    achievements: [
+      "Delivered a fully configurable slot-based template engine adaptable to any device type and card sorting strategy.",
+      "Reduced manual card sorting overhead with an automated categorization system driven by admin-defined rules.",
+    ],
   },
 ];
 
@@ -43,7 +56,9 @@ const ExperienceSection = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">Work Experience</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            Work Experience
+          </h2>
           <div className="w-12 h-1 bg-primary mx-auto rounded-full" />
         </motion.div>
 
@@ -63,15 +78,26 @@ const ExperienceSection = () => {
                 </div>
                 <div className="flex-1">
                   <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-1">
-                    <h3 className="text-xl font-bold text-foreground">{exp.role}</h3>
-                    <span className="text-sm text-muted-foreground font-mono">{exp.duration}</span>
+                    <h3 className="text-xl font-bold text-foreground">
+                      {exp.role}
+                    </h3>
+                    <span className="text-sm text-muted-foreground font-mono">
+                      {exp.duration}
+                    </span>
                   </div>
-                  <p className="text-primary font-semibold text-sm mb-4">{exp.company}</p>
+                  <p className="text-primary font-semibold text-sm mb-4">
+                    {exp.company}
+                  </p>
 
                   <ul className="space-y-2 mb-4">
                     {exp.responsibilities.map((r, j) => (
-                      <li key={j} className="text-muted-foreground text-sm flex gap-2">
-                        <span className="text-primary mt-0.5 flex-shrink-0">▹</span>
+                      <li
+                        key={j}
+                        className="text-muted-foreground text-sm flex gap-2"
+                      >
+                        <span className="text-primary mt-0.5 flex-shrink-0">
+                          ▹
+                        </span>
                         {r}
                       </li>
                     ))}
@@ -79,9 +105,16 @@ const ExperienceSection = () => {
 
                   {exp.achievements.length > 0 && (
                     <div className="border-t border-border pt-3">
-                      <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-mono">Key Achievements</p>
+                      <p className="text-xs uppercase tracking-wider text-muted-foreground mb-2 font-mono">
+                        Key Achievements
+                      </p>
                       {exp.achievements.map((a, j) => (
-                        <p key={j} className="text-sm text-foreground font-medium">⚡ {a}</p>
+                        <p
+                          key={j}
+                          className="text-sm text-foreground font-medium"
+                        >
+                          ⚡ {a}
+                        </p>
                       ))}
                     </div>
                   )}

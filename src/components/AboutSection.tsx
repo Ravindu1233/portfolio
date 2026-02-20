@@ -13,15 +13,29 @@ const AboutSection = () => {
         >
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card glow-border mb-4">
             <Terminal className="w-3.5 h-3.5 text-primary" />
-            <span className="text-xs text-muted-foreground font-mono">about_me</span>
+            <span className="text-xs text-muted-foreground font-mono">
+              about_me
+            </span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">About Me</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
+            About Me
+          </h2>
           <div className="w-12 h-1 bg-primary mx-auto rounded-full mb-8" />
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm a passionate full-stack developer with a love for building elegant, performant web applications.
-            With expertise spanning React, Node.js, and cloud technologies, I thrive on turning complex problems
-            into intuitive digital experiences. When I'm not coding, you'll find me exploring the latest in AI
-            research or hiking the trails of Northern California.
+            I'm Ravindu Weerasinghe, a passionate Software Engineer currently
+            pursuing a Bachelor's in Software Engineering at the National
+            Institute of Business Management (NIBM). I have a strong foundation
+            in object-oriented programming, data structures, and the software
+            development lifecycle. My technical expertise spans across React.js,
+            Next.js, Java, Spring Boot, and full-stack development, with a
+            particular interest in building scalable, efficient web
+            applications. Throughout my career, I've worked on a variety of
+            projects, ranging from a Vehicle Sales Aggregator to an MTG Card
+            Sorting application. I've gained practical experience with REST
+            APIs, JWT authentication, and database management using tools like
+            MySQL, MongoDB, PostgreSQL, and Prisma ORM. In my projects, I focus
+            on creating seamless user experiences while ensuring performance and
+            scalability.
           </p>
         </motion.div>
       </div>
