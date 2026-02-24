@@ -29,14 +29,12 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-16">
-        <a
-          href="#"
-          className="flex items-center gap-2 font-bold text-xl text-primary"
-        >
-          <Code2 className="w-5 h-5" />
-          <span>
-            R<span className="text-foreground">avindu</span>
-          </span>
+        <a href="#" className="flex items-center gap-3 font-bold text-xl">
+          <div className="w-9 h-9 rounded-lg bg-primary/10 border border-primary/30 flex items-center justify-center text-primary shadow-md">
+            R
+          </div>
+
+          <span className="tracking-tight">Ravindu</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
