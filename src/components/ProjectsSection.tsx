@@ -26,7 +26,7 @@ const projects: Project[] = [
         url: "https://github.com/Ravindu1233/book_project.git",
       },
     ],
-    videoUrl: "public/videos/Book-Management-System.mp4",
+    videoUrl: "/videos/Book-Management-System.mp4",
   },
   {
     name: "Todo Management Full Stack App",
@@ -53,7 +53,7 @@ const projects: Project[] = [
         url: "https://github.com/Ravindu1233/todo-management-springboot-backend.git",
       },
     ],
-    videoUrl: "public/videos/todo-managment.mp4",
+    videoUrl: "/videos/todo-managment.mp4",
   },
   {
     name: "MERN Stack User Management App",
@@ -76,7 +76,7 @@ const projects: Project[] = [
         url: "https://github.com/Ravindu1233/Mern-Stack-User-Application",
       },
     ],
-    videoUrl: "public/videos/user-managment.mp4",
+    videoUrl: "/videos/user-managment.mp4",
   },
   {
     name: "Pathfinder Career Guidance App",
@@ -95,7 +95,7 @@ const projects: Project[] = [
         url: "https://github.com/tharaka-jayasinghe-7/pathfinder-backend.git",
       },
     ],
-    videoUrl: "public/videos/pathfinder.mp4",
+    videoUrl: "/videos/pathfinder.mp4",
   },
   {
     name: "Vehicle Sales Aggregator",
