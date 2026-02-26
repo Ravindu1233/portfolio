@@ -18,24 +18,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section
-      id="hero"
-      className="min-h-[100svh] flex items-center relative overflow-hidden bg-background pt-20"
-    >
-      {/* Grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "linear-gradient(hsl(142 70% 45%) 1px, transparent 1px), linear-gradient(90deg, hsl(142 70% 45%) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-
-      {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-72 sm:w-96 h-72 sm:h-96 rounded-full bg-primary/5 blur-[120px]" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 sm:w-64 h-48 sm:h-64 rounded-full bg-primary/8 blur-[100px]" />
-
+    <section className="min-h-screen flex items-center relative overflow-hidden pt-20">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
           {/* Left Content */}

@@ -100,7 +100,7 @@ const techStack = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="section-padding bg-background relative">
+    <section id="about" className="section-padding relative">
       <div className="container mx-auto max-w-5xl">
         {/* About Me Text */}
         <motion.div

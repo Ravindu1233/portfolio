@@ -28,7 +28,7 @@ const education: Education[] = [
 
 const EducationSection = () => {
   return (
-    <section id="education" className="section-padding bg-background">
+    <section id="education" className="section-padding">
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

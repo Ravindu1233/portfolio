@@ -48,7 +48,10 @@ const experiences: Experience[] = [
 
 const ExperienceSection = () => {
   return (
-    <section id="experience" className="section-padding bg-secondary/30">
+    <section
+      id="experience"
+      className="section-padding bg-background/40 backdrop-blur-sm"
+    >
       <div className="container mx-auto max-w-4xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
