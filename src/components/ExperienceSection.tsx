@@ -11,20 +11,20 @@ interface Experience {
 
 const experiences: Experience[] = [
   {
-    company: "Taznic Technologies",
+    company: "Idea8 Solutions",
     role: "Full-Stack Developer Intern",
-    duration: "2024 – Present",
+    duration: "2024 - Present",
     responsibilities: [
-      "Developed a Vehicle Sales Aggregator web application that consolidates vehicle listings from multiple platforms into a single unified interface.",
-      "Built advanced search and filtering features allowing users to filter by make, model, year, price range, mileage, and location.",
-      "Implemented a price comparison tool enabling side-by-side comparison of similar vehicles across different sources.",
-      "Developed user and admin authentication systems with listing approval workflows to ensure quality control.",
-      "Designed and optimized backend APIs for efficient data aggregation, storage, and retrieval of vehicle listings.",
-      "Integrated user alerts and notifications for specific vehicle models or price ranges.",
+      "Developed a production-ready company web platform using Next.js 15, React 19, TypeScript, and Tailwind CSS 4 for a robotics and IoT product company.",
+      "Built a protected admin dashboard with NextAuth v5 credentials, bcrypt password checks, and session-based route guards.",
+      "Implemented project management APIs (GET/POST/PUT/PATCH/DELETE) with server-side validation, status filtering, and active/inactive visibility controls.",
+      "Integrated Supabase Storage image uploads with file type and 5MB size validation, unique naming, public URL generation, and old file cleanup.",
+      "Designed a dynamic public project showcase with Framer Motion animations, responsive layouts, and modal detail views across desktop and mobile.",
+      "Added Cloudflare Turnstile verification and strengthened security by configuring Content Security Policy headers in Next.js.",
     ],
     achievements: [
-      "Delivered a full-featured aggregator platform covering the complete vehicle listing lifecycle from scraping to display.",
-      "Implemented listing approval workflows that reduced fraudulent or duplicate listings significantly.",
+      "Used Prisma ORM with PostgreSQL models and migrations for User and Project entities, including seeded admin bootstrap data.",
+      "Delivered a secure full-stack CMS workflow for managing portfolio projects with authentication, media upload, and bot protection.",
     ],
   },
   {
@@ -32,16 +32,16 @@ const experiences: Experience[] = [
     role: "Full-Stack Developer Intern",
     duration: "2024",
     responsibilities: [
-      "Built an MTG (Magic: The Gathering) Card Sorting application with advanced filtering, categorization, and sorting capabilities.",
-      "Designed an admin panel where admins can define device types (e.g., 5×5 grids) and register individual devices under those types.",
-      "Implemented a template creation system where templates are built based on device type, with each slot configurable for content, pricing, and card attributes.",
-      "Supported both alphabetical and price-based sorting modes within templates, with flexible toggling between the two.",
-      "Designed the full-stack architecture with a focus on API efficiency, scalable database design, and a clean, intuitive UI/UX.",
-      "Enabled device login flows where each registered device can authenticate and load its assigned template configuration.",
+      "Developed an end-to-end MTG card-sorting platform with a React frontend and NestJS backend for sorting devices, templates, and slot configuration workflows.",
+      "Built API-driven frontend modules for editing slot rules, managing templates and devices, and operating card-sorting configurations.",
+      "Engineered a NestJS plus Prisma backend with PostgreSQL models for cards, devices, device types, templates, and slot definitions.",
+      "Implemented role-separated authentication (admin JWT and device JWT), bcrypt-secured credentials, and ownership-based access control.",
+      "Added admin account lifecycle features including registration, login, profile updates, password change, and OTP-based password reset via email.",
+      "Designed and validated slot logic for PRICE, ALPHABET, LOADING, NONE, and UNSORTED types with overlap checks, range validation, and loading constraints.",
     ],
     achievements: [
-      "Delivered a fully configurable slot-based template engine adaptable to any device type and card sorting strategy.",
-      "Reduced manual card sorting overhead with an automated categorization system driven by admin-defined rules.",
+      "Improved reliability with modular NestJS controller and service architecture, global validation pipes, and migration-driven schema evolution.",
+      "Established quality gates with Jest and Supertest e2e testing and standardized lint/build/test scripts for CI-ready development.",
     ],
   },
 ];
@@ -99,7 +99,7 @@ const ExperienceSection = () => {
                         className="text-muted-foreground text-sm flex gap-2"
                       >
                         <span className="text-primary mt-0.5 flex-shrink-0">
-                          ▹
+                          {">"}
                         </span>
                         {r}
                       </li>
@@ -116,7 +116,7 @@ const ExperienceSection = () => {
                           key={j}
                           className="text-sm text-foreground font-medium"
                         >
-                          ⚡ {a}
+                          * {a}
                         </p>
                       ))}
                     </div>
