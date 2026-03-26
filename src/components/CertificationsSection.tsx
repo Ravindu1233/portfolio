@@ -5,27 +5,39 @@ interface Certification {
   name: string;
   issuer: string;
   date: string;
-  link?: string;
+  image: string;
 }
 
 const certifications: Certification[] = [
   {
-    name: "AWS Certified Solutions Architect",
-    issuer: "Amazon Web Services",
-    date: "March 2022",
-    link: "#",
+    name: "Postman API Fundamentals Student Expert",
+    issuer: "Postman",
+    date: "Issued Oct 2024",
+    image: "/certifications/Postman API Fundamentals Student Expert.jfif",
   },
   {
-    name: "Google Professional Cloud Developer",
-    issuer: "Google Cloud",
-    date: "August 2022",
-    link: "#",
+    name: "Problem Solving (Basic)",
+    issuer: "HackerRank",
+    date: "Issued Sep 2024",
+    image: "/certifications/problem solving basic certificate.jfif",
   },
   {
-    name: "Meta Front-End Developer Certificate",
-    issuer: "Meta (Coursera)",
-    date: "January 2023",
-    link: "#",
+    name: "Database Design Learner",
+    issuer: "Oracle",
+    date: "Issued Sep 2024",
+    image: "/certifications/Database Design.png",
+  },
+  {
+    name: "DFo Database Foundations Learner",
+    issuer: "Oracle",
+    date: "Issued Aug 2024",
+    image: "/certifications/Database Foundations.png",
+  },
+  {
+    name: "Object Oriented Programming",
+    issuer: "Great Learning",
+    date: "Issued Aug 2024",
+    image: "/certifications/Object Oriented Programming.jfif",
   },
 ];
 
@@ -58,26 +70,26 @@ const CertificationsSection = () => {
               transition={{ delay: i * 0.1 }}
               className="flex items-center gap-4 glass-card glow-border rounded-xl p-5 hover:border-primary/30 transition-colors"
             >
-              <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                <Award className="w-5 h-5 text-primary" />
+              <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
+                <Award className="h-5 w-5 text-primary" />
               </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="font-bold text-foreground text-sm md:text-base">
+              <div className="min-w-0 flex-1">
+                <h3 className="text-sm font-bold text-foreground md:text-base">
                   {cert.name}
                 </h3>
-                <p className="text-sm text-muted-foreground font-mono">
-                  {cert.issuer} · {cert.date}
+                <p className="font-mono text-sm text-muted-foreground">
+                  {cert.issuer} - {cert.date}
                 </p>
               </div>
-              {cert.link && (
-                <a
-                  href={cert.link}
-                  className="flex-shrink-0 flex items-center gap-1 text-primary text-sm font-medium hover:underline"
-                >
-                  <span className="hidden sm:inline">Verify</span>
-                  <ExternalLink className="w-4 h-4" />
-                </a>
-              )}
+              <a
+                href={cert.image}
+                target="_blank"
+                rel="noreferrer"
+                className="flex flex-shrink-0 items-center gap-1 text-sm font-medium text-primary hover:underline"
+              >
+                <span className="hidden sm:inline">Verify</span>
+                <ExternalLink className="h-4 w-4" />
+              </a>
             </motion.div>
           ))}
         </div>

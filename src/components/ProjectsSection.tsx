@@ -9,6 +9,7 @@ interface Project {
   role: string;
   githubLinks: { label: string; url: string }[];
   videoUrl?: string;
+  demoLink?: string;
   type: "Personal" | "Group";
 }
 
@@ -56,27 +57,28 @@ const projects: Project[] = [
     videoUrl: "/videos/todo-managment.mp4",
   },
   {
-    name: "MERN Stack User Management App",
+    name: "Career Platform",
     description:
-      "Full-stack user management app featuring secure JWT-based registration and login, profile updates, email verification, OTP-based password reset, and protected routes. Built with Formik for forms and Zustand for state management.",
+      "Full-stack career platform with separate dashboards for job seekers, employers, and admins. Includes moderated approval workflows across companies, jobs, and institutions, CV uploads, interview scheduling, in-app notifications, transactional emails, 2FA, dark mode, and secure settings management.",
     technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "NestJS",
+      "Prisma",
+      "PostgreSQL",
       "JWT",
-      "Formik",
-      "Zustand",
+      "OTP-based 2FA",
+      "RBAC",
+      "Sharp",
     ],
     role: "Solo Developer",
     type: "Personal",
-    githubLinks: [
-      {
-        label: "GitHub",
-        url: "https://github.com/Ravindu1233/Mern-Stack-User-Application",
-      },
-    ],
-    videoUrl: "/videos/user-managment.mp4",
+    githubLinks: [],
+    demoLink:
+      "https://drive.google.com/file/d/1fLbA3pGwQSFLKix5__4_W8ON2Xx5GcUr/view?usp=drive_link",
   },
   {
     name: "Pathfinder Career Guidance App",
@@ -210,14 +212,24 @@ const ProjectsSection = () => {
                   </span>
 
                   {/* Video button */}
-                  {project.videoUrl && (
+                  {project.videoUrl ? (
                     <button
-                      onClick={() => setActiveVideo(project.videoUrl!)}
+                      onClick={() => setActiveVideo(project.videoUrl)}
                       className="flex items-center gap-1 text-xs text-primary font-medium hover:underline"
                     >
                       <Play className="w-3 h-3" /> Demo
                     </button>
-                  )}
+                  ) : project.demoLink ? (
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex items-center gap-1 text-xs text-primary font-medium hover:underline"
+                    >
+                      <Play className="w-3 h-3" /> Demo
+                      <ExternalLink className="w-2.5 h-2.5" />
+                    </a>
+                  ) : null}
                 </div>
 
                 {/* GitHub links */}
