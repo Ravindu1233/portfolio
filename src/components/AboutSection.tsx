@@ -4,7 +4,16 @@ import { Terminal } from "lucide-react";
 const skillCategories = [
   {
     title: "Languages",
-    skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Java", "C#", "SQL"],
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "TypeScript",
+      "Java",
+      "C#",
+      "PHP",
+      "SQL",
+    ],
   },
   {
     title: "Frameworks & Libraries",
@@ -13,8 +22,11 @@ const skillCategories = [
       "Next.js",
       "React Native",
       "Spring Boot",
+      "ASP.NET Core",
       "NestJS",
       "Laravel",
+      "CodeIgniter 4",
+      "OpenCart",
       "Tailwind CSS",
       "Bootstrap",
       "Framer Motion",
@@ -30,11 +42,13 @@ const skillCategories = [
       "MySQL",
       "PostgreSQL",
       "MS SQL Server",
+      ".NET",
       "REST APIs",
       "JWT",
       "NextAuth",
       "Supabase",
       "Postman",
+      "Gemini API",
     ],
   },
   {
@@ -45,6 +59,21 @@ const skillCategories = [
       "Docker",
       "CI/CD Pipelines",
       "AWS (EC2, S3)",
+      "DigitalOcean",
+      "Cloudflare",
+      "Linux (basics)",
+      "FileZilla (FTP/SFTP)",
+    ],
+  },
+  {
+    title: "Concepts",
+    skills: [
+      "Data Structures & Algorithms",
+      "OOP",
+      "Software Design Patterns",
+      "MVC Architecture",
+      "Agile Methodologies",
+      "Microservices",
     ],
   },
 ];
@@ -59,8 +88,20 @@ const techStack = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   },
   {
+    name: "PHP",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+  },
+  {
     name: "Java",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+  },
+  {
+    name: "C#",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+  },
+  {
+    name: ".NET",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
   },
   {
     name: "React",
@@ -99,16 +140,24 @@ const techStack = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
   },
   {
+    name: "Docker",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  },
+  {
+    name: "DigitalOcean",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/digitalocean/digitalocean-original.svg",
+  },
+  {
+    name: "Cloudflare",
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg",
+  },
+  {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
   {
     name: "Postman",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
-  },
-  {
-    name: "C#",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
   },
 ];
 
@@ -135,18 +184,17 @@ const AboutSection = () => {
           </h2>
           <div className="w-12 h-1 bg-primary mx-auto rounded-full mb-8" />
           <p className="text-lg text-muted-foreground leading-relaxed">
-            I'm Ravindu Weerasinghe, a passionate Software Engineer currently
-            pursuing a Bachelor's in Software Engineering at the National
-            Institute of Business Management (NIBM). I have a solid foundation
-            in object-oriented programming, data structures, and the software
-            development lifecycle. My expertise spans React.js, Next.js, Java,
-            Spring Boot, and full-stack development, with a focus on building
-            scalable web applications. I've worked on projects like a Vehicle
-            Sales Aggregator and MTG Card Sorting application, gaining
-            experience with REST APIs, JWT authentication, and database
-            management using MySQL, MongoDB, PostgreSQL, and Prisma ORM. I aim
-            to create seamless, high-performance user experiences while ensuring
-            scalability.
+            I'm Ravindu Weerasinghe, a passionate Software Engineer and Junior Web
+            Application Developer currently pursuing a Bachelor's in Software
+            Engineering at the National Institute of Business Management (NIBM).
+            I have a solid foundation in object-oriented programming, data
+            structures, and the software development lifecycle. My expertise spans
+            React.js, Next.js, PHP, CodeIgniter 4, Java, Spring Boot, and full-stack
+            development, with a focus on building scalable web applications and
+            intelligent solutions integrated with modern APIs (including Gemini API).
+            Experienced in delivering production web platforms, POS architectures,
+            and e-commerce systems with robust database designs across MySQL,
+            MongoDB, PostgreSQL, and Prisma ORM.
           </p>
         </motion.div>
 
@@ -161,32 +209,50 @@ const AboutSection = () => {
           <h3 className="text-2xl font-bold text-foreground text-center mb-8">
             Skills
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {skillCategories.map((category, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="glass-card glow-border rounded-xl p-5 hover:border-primary/30 transition-colors"
-              >
-                <h4 className="text-primary font-bold text-base mb-4">
-                  {category.title}
-                </h4>
-                <ul className="space-y-2">
-                  {category.skills.map((skill) => (
-                    <li
-                      key={skill}
-                      className="flex items-center gap-2 text-sm text-muted-foreground"
-                    >
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-5">
+            {skillCategories.map((category, i) => {
+              const spanClass =
+                i < 3
+                  ? "lg:col-span-2"
+                  : i === 4
+                    ? "md:col-span-2 lg:col-span-3"
+                    : "lg:col-span-3";
+
+              const isWide = i >= 3;
+
+              return (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className={`glass-card glow-border rounded-xl p-5 hover:border-primary/30 transition-colors flex flex-col ${spanClass}`}
+                >
+                  <h4 className="text-primary font-bold text-base mb-4 flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                    {category.title}
+                  </h4>
+                  <ul
+                    className={
+                      isWide
+                        ? "grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2"
+                        : "space-y-2"
+                    }
+                  >
+                    {category.skills.map((skill) => (
+                      <li
+                        key={skill}
+                        className="flex items-center gap-2 text-sm text-muted-foreground"
+                      >
+                        <span className="w-1.5 h-1.5 rounded-full bg-primary/70 flex-shrink-0" />
+                        <span>{skill}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -203,11 +269,11 @@ const AboutSection = () => {
           <div className="flex flex-wrap justify-center gap-4">
             {techStack.map((tech, i) => (
               <motion.div
-                key={i}
+                key={tech.name}
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.05 }}
+                transition={{ delay: i * 0.04 }}
                 whileHover={{ scale: 1.15 }}
                 className="group flex flex-col items-center gap-2"
               >

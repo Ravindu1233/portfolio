@@ -5,8 +5,8 @@ import profilePhoto from "@/assets/profile-photo.jpg";
 const stats = [
   { value: "1+", label: "Years\nExperience" },
   { value: "10+", label: "Projects\nCompleted" },
-  { value: "15+", label: "Technologies" },
-  { value: "2", label: "Internships\nCompleted" },
+  { value: "20+", label: "Technologies" },
+  { value: "3", label: "Work\nExperiences" },
 ];
 
 const HeroSection = () => {
@@ -47,10 +47,11 @@ const HeroSection = () => {
 
             {/* Description */}
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 mb-8 leading-relaxed">
-              Enthusiastic Software Engineer with a strong foundation in
-              object-oriented programming, React.js, Java, Next.js and Spring
-              Boot. Passionate about building modern web applications and
-              transforming ideas into exceptional digital experiences.
+              Enthusiastic Software Engineer and Web Application Developer with a
+              strong foundation in object-oriented programming, modern full-stack
+              frameworks (React.js, Next.js, CodeIgniter 4, Spring Boot), and
+              AI-driven integrations. Passionate about engineering high-performance
+              web applications and intuitive digital experiences.
             </p>
 
             {/* Buttons & Social */}
